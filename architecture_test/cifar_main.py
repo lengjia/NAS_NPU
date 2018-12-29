@@ -101,7 +101,7 @@ def get_model_fn(nnObj,num_gpus, variable_strategy, num_workers):
           with tf.device(device_setter):
             loss, gradvars, preds = _tower_fn(
                 is_training, weight_decay, tower_features[i], tower_labels[i],nnObj,
-                data_format, params.num_layers, params.batch_norm_decay,
+                data_format,  params.batch_norm_decay,
                 params.batch_norm_epsilon)
             tower_losses.append(loss)
             tower_gradvars.append(gradvars)

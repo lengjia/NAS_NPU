@@ -68,7 +68,7 @@ def get_experiment_fn(nnObj,data_dir, num_gpus,variable_strategy,use_distortion_
  
     classifier = tf.estimator.Estimator(
         model_fn=cifar_main.get_model_fn(nnObj,num_gpus, variable_strategy,
-                              run_config.num_worker_replicas or 1,nnObj),
+                              run_config.num_worker_replicas or 1),
         config=run_config,
         params=hparams)
 

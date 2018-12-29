@@ -61,6 +61,7 @@ class VGG16(vgg_base.ConvNet):
             else:
                 x = tf.transpose(x,[0,2,3,1])
         x = x/128.0 -1 
+        nn = self.nn
         # x = self._conv_layer(x,3,64,1)
         # x = self._conv_layer(x,3,64,1)
         # x = self._max_pool_layer(x,3,1)
