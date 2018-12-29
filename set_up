@@ -1,6 +1,6 @@
 
 # Set HOME_PATH to the current directory
-HOME_PATH=$HOME/study/NAS_NPU
+HOME_PATH=$HOME/project/NAS_NPU
 PATH=$PATH:$HOME_PATH
 export PYTHONPATH=$HOME_PATH
 
