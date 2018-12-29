@@ -5,6 +5,10 @@ from __future__ import print_function
 import tensorflow as tf 
 import vgg_base
 
+def get_layer_parents(adjList,lidx):
+  """ Returns parent layer indices for a given layer index. """
+  return [e[0] for e in adjList if e[1]==lidx]
+
 class VGG16(vgg_base.ConvNet):
     """docstring for VGG16""" 
     def __init__(self, nnObj,is_training,batch_norm_decay,batch_norm_epsilon,data_format='channels_first'):
