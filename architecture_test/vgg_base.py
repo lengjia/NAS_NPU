@@ -116,6 +116,7 @@ class ConvNet(object):
         tf.logging.info('image after unit %s: %s', name_scope, x.get_shape())
         return x
 
+
     def _softmax_layer(self,x):
         with tf.name_scope('softmax') as name_scope:
             x = tf.nn.softmax(x)

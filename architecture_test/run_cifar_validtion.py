@@ -14,7 +14,7 @@ import tensorflow as tf
 import cifar_main 
 from cifar import cifar10_utils, cifar10
 
-from nn.nn_examples import get_vgg_net
+from nn.nn_examples import get_vgg_net_chen
 
 def get_experiment_fn(nnObj,data_dir, num_gpus,variable_strategy,use_distortion_for_training=True):
   """Returns an Experiment function.
@@ -106,7 +106,7 @@ def main(job_dir, data_dir, num_gpus, variable_strategy,
 
   config = cifar10_utils.RunConfig(
       session_config=sess_config, model_dir=job_dir)
-  nn = get_vgg_net()
+  nn = get_vgg_net_chen()
   tf.contrib.learn.learn_runner.run(
       get_experiment_fn(nn,data_dir, num_gpus, variable_strategy,
                         use_distortion_for_training),
